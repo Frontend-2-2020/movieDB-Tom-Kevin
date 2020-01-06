@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react';
+import { KEY } from '../../config';
 
-const Home = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+class Home extends Component {
+  render() {
+    console.log(KEY)
+    return (
+      <div>
+        
+      </div>
+    );
+  }
 }
 
-export default Home
+export default Home;
