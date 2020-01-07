@@ -8,7 +8,6 @@ import Home from "./Pages/Home";
 export default class App extends Component {
   render() {
     return (
-      <div>
         <Router>
           <Switch>
             <Route path="XXXX" component={Detail}/>
@@ -17,7 +16,6 @@ export default class App extends Component {
           <Home />
           <Detail />
         </Router>
-      </div>
     );
   }
 }
