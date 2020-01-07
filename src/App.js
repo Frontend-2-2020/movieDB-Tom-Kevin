@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import Detail from "./Pages/Detail/Detail";
-import Home from "./Pages/Home/Home";
+import Detail from "./Pages/Detail";
+import Home from "./Pages/Home";
+
 
 
 export default class App extends Component {
@@ -9,7 +10,7 @@ export default class App extends Component {
     return (
     <div>
       <Home />
-      <Detail/>
+      <Detail />
     </div>);
   }
 }
