@@ -5,20 +5,32 @@ import axios from 'axios';
 import queryString from 'query-string';
 
 class Home extends Component {
-  getData = () =>{
+  state = {
+    movies: [],
+    page: 1
+  }  
+
+  componentDidMount = () =>{
     axios
-      .get("https://uselessfacts.jsph.pl/random.json?language=en")
-      .then(response => {
-        console.log(response);
-        });  
+    .get(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&page=1`)
+    .then(response => {
+      const output = {
+        movies: response.data.results,
+        page: response.data.page
+      }
+      
+      this.setState({movies: output.movies, page: output.page})
+      console.log(this.state);
+      });  
   }
 
   render() {
-    this.getData();
-    console.log(KEY)
+    const movies = this.state.movies;
     return (
-      <div>
-        <MovieCard />
+      <div className="overview__grid">
+        {movies.map(movie =>{
+          return <MovieCard key={movie.id}/>
+        })}
       </div>
     );
   }

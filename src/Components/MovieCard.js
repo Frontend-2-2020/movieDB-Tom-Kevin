@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class MovieCard extends Component {
   render() {
     return (
-      <div>
-        
+      <div className="card">
+        movie
       </div>
     );
   }

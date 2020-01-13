@@ -15,8 +15,8 @@ export default class App extends Component {
             <Route path="XXXX" component={Detail}/>
             <Route path="/" component={Home}/>
           </Switch>
-          <Home />
-          <Detail />
+          {/* <Home />
+          <Detail /> */}
         </Router>
     );
   }
