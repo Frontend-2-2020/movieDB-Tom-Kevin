@@ -1,0 +1,27 @@
+
+
+.overview__grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 400px;
+  grid-gap: 1rem;
+  width: 80%;
+  margin: auto;
+}
+
+.grid__item{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.moviedetails{
+  position: absolute;
+  bottom: 0;
+}
+
+/* TO DELETE */
+img{
+  opacity: .5;
+}

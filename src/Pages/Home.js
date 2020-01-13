@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { KEY } from '../config';
 import MovieCard from '../Components/MovieCard'
 import axios from 'axios';
+import styling from "../Styles/Home.module.css";
 import queryString from 'query-string';
 
 class Home extends Component {
   state = {
     movies: [],
     page: 1
-  }  
+  }
 
   componentDidMount = () =>{
     axios
@@ -27,9 +28,10 @@ class Home extends Component {
   render() {
     const movies = this.state.movies;
     return (
-      <div className="overview__grid">
+      <div className={styling.overview__grid}>
         {movies.map(movie =>{
-          return <MovieCard key={movie.id}/>
+          console.log(movie);
+          return <MovieCard key={movie.id} movieId={movie.id}/>
         })}
       </div>
     );

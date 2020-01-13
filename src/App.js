@@ -12,7 +12,7 @@ export default class App extends Component {
         <Router>
           <NavBar/>
           <Switch>
-            <Route path="XXXX" component={Detail}/>
+            <Route path="/movie/:id" component={Detail}/>
             <Route path="/" component={Home}/>
           </Switch>
           {/* <Home />
