@@ -10,12 +10,11 @@ class MovieCard extends Component {
     console.log(movieId, title, poster, release, score)
     return (
       <div className={styling.grid__item}>
-        {/* <img src="https://source.unsplash.com/random/200x400" alt=""/> */}
         <img src={`https://image.tmdb.org/t/p/w300/${poster}`} alt={`${title} poster`}/>
 
         <div className={styling.moviedetails}>
-          <h1>{title}</h1>
-          <p>{release}</p>
+          <h1 className="text-light">{title}</h1>
+          <p className="text-light">{release}</p>
           <Link to={`movie/${movieId}`}>+ more info</Link>
         </div>
       </div>
