@@ -3,7 +3,6 @@ import { KEY } from '../config';
 import MovieCard from '../Components/MovieCard'
 import axios from 'axios';
 import styling from "../Styles/Home.module.css";
-import queryString from 'query-string';
 
 class Home extends Component {
   state = {
@@ -21,7 +20,7 @@ class Home extends Component {
       }
       
       this.setState({movies: output.movies, page: output.page})
-      console.log(this.state);
+      console.log('state', this.state);
       });  
   }
 
@@ -30,8 +29,13 @@ class Home extends Component {
     return (
       <div className={styling.overview__grid}>
         {movies.map(movie =>{
-          console.log(movie);
-          return <MovieCard key={movie.id} movieId={movie.id}/>
+          return <MovieCard key={movie.id} 
+                            movieId={movie.id} 
+                            title={movie.title}
+                            poster={movie.poster_path}
+                            release={movie.release_date}
+                            score={movie.vote_average}
+                            />
         })}
       </div>
     );
