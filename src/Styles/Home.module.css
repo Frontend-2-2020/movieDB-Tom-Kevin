@@ -1,4 +1,7 @@
 
+body{
+  background: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center / cover;
+}
 
 .overview__grid{
   display: grid;
@@ -6,6 +9,7 @@
   grid-gap: 1rem;
   width: 80%;
   margin: auto;
+  border-radius: 20px;
 }
 
 .grid__item{
@@ -15,17 +19,56 @@
   justify-content: space-between;
 }
 
+.grid__item img{
+  box-shadow: 3px 3px 11px -4px rgba(0,0,0,0.75);
+  border-radius: 30px;
+}
+
+.grid__item .moviedetailsbox{
+  border-radius: 0 0 30px 30px;
+}
+
+h1, h2, h3{
+  color: white;
+}
+
 h1{
   font-size: 1.5rem;
 }
 
-.moviedetails{
+h2{
+  font-size: 1rem;
+}
+
+h3{
+  font-size: 1.1rem;
+}
+
+.moviedetailsbox{
   position: absolute;
   bottom: 0;
-  left: 10px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0,0,0,.8);
+}
+
+h3.score{
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  background: green;
+  width: 60px;
+  text-align: center;
+  margin: auto;
+  padding: 1.1rem 0;
+  border-radius: 50%;
+}
+
+ul li:hover{
+  cursor: pointer;
 }
 
 /* TO DELETE */
-img{
+/* img{
   opacity: .5;
-}
+} */

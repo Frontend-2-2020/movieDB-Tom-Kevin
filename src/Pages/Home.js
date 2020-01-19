@@ -8,7 +8,7 @@ import Pagination from '../Components/Pagination';
 class Home extends Component {
   state = {
     movies: [],
-    page: 5
+    page: 2
   }
 
   componentDidMount = () =>{
@@ -29,9 +29,9 @@ class Home extends Component {
       });  
   }
 
-  getNewPage = (nextPage) =>{
-    this.getData(nextPage)
-    console.log('clicked', nextPage)
+  changePage = (newPage) =>{
+    this.getData(newPage);
+    console.log('clicked', newPage)
   }
 
   render() {
@@ -49,7 +49,7 @@ class Home extends Component {
                               />
           })}
         </div>
-        <Pagination currentPage={this.state.page} getOverviewData={this.getNewPage} />
+        <Pagination currentPage={this.state.page} getOverviewData={this.changePage} />
       </div>
     );
   }
