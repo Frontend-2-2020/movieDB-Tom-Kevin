@@ -23,7 +23,6 @@ class MovieCard extends Component {
             <span>+ more info</span>
           </Link>
           <h3 className={styling.score}>{score}</h3>
-
         </div>
       </div>
     );

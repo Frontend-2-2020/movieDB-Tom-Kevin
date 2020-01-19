@@ -4,6 +4,7 @@ import MovieCard from '../Components/MovieCard'
 import axios from 'axios';
 import styling from "../Styles/Home.module.css";
 import Pagination from '../Components/Pagination';
+import Pagenumber from '../Components/Pagenumber';
 
 class Home extends Component {
   state = {
@@ -38,6 +39,7 @@ class Home extends Component {
     const movies = this.state.movies;
     return (
       <div>
+        <Pagenumber currentPage={this.state.page}/>
         <div className={styling.overview__grid}>
           {movies.map(movie =>{
             return <MovieCard key={movie.id} 
