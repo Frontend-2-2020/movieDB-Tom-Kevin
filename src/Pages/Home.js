@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { KEY } from '../config';
-import MovieCard from '../Components/MovieCard'
 import axios from 'axios';
-import styling from "../Styles/Home.module.css";
+import MovieCard from '../Components/MovieCard'
 import Pagination from '../Components/Pagination';
 import Pagenumber from '../Components/Pagenumber';
+import styling from "../Styles/Home.module.css";
 
 class Home extends Component {
   state = {
     movies: [],
-    page: 2
+    page: 1
   }
 
   componentDidMount = () =>{
@@ -36,10 +36,14 @@ class Home extends Component {
   }
 
   render() {
-    const movies = this.state.movies;
+    const {movies, page} = this.state;
+
     return (
       <div>
-        <Pagenumber currentPage={this.state.page}/>
+        {/* Pagenumber component for the number indicator on the right */}
+        <Pagenumber currentPage={page}/>
+
+        {/* Render out all the moviecards based on API */}
         <div className={styling.overview__grid}>
           {movies.map(movie =>{
             return <MovieCard key={movie.id} 
@@ -51,7 +55,9 @@ class Home extends Component {
                               />
           })}
         </div>
-        <Pagination currentPage={this.state.page} getOverviewData={this.changePage} />
+        
+        {/* Render pagination */}
+        <Pagination currentPage={page} getOverviewData={this.changePage} />
       </div>
     );
   }
