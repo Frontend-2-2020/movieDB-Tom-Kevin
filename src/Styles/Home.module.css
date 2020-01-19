@@ -1,6 +1,8 @@
 
 body{
-  background: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center / cover;
+  background: linear-gradient(to bottom, #00b4db, #0083b0);
+  overflow-x: hidden;
+  position: relative;
 }
 
 .overview__grid{
@@ -73,11 +75,12 @@ ul li:hover{
   font-family: serif;
   font-style: italic;
   color: lightgray;
-  padding: .8rem;
+  padding: 1rem;
 
   position: absolute;
   z-index: 1;
-  right: -8px;
+  top: 0;
+  right: -5px;
   background: #000;
-  transform: rotate(5deg);
+  transform: rotate(7deg);
 }

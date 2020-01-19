@@ -26,20 +26,18 @@ class Home extends Component {
       }
       
       this.setState({movies: output.movies, page: output.page})
-      console.log('state', this.state);
       });  
   }
 
   changePage = (newPage) =>{
     this.getData(newPage);
-    console.log('clicked', newPage)
   }
 
   render() {
     const {movies, page} = this.state;
 
     return (
-      <div>
+      <div className={styling.homecontainer}>
         {/* Pagenumber component for the number indicator on the right */}
         <Pagenumber currentPage={page}/>
 

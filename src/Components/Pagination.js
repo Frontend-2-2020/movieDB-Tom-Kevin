@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import "../Styles/Home.module.css";
 
 class Pagination extends Component {
-  showFullPagination = () => {
-    console.log("func", this.props.getOverviewData(this.props.currentPage));
-  };
-
   render() {
     const { currentPage, getOverviewData } = this.props;
     const showFromSecondpage = (
@@ -19,7 +15,6 @@ class Pagination extends Component {
       </li>
     );
 
-    console.log(this.props);
     return (
       <nav aria-label="Page navigation example">
         <ul className="pagination justify-content-center mt-4">
@@ -35,8 +30,8 @@ class Pagination extends Component {
             </span>
           </li>
 
-          {/* Adapt pagenumbers if on page 1 or further*/}
-          {currentPage !== 1 ? showFromSecondpage : ''}
+          {/* Adapt pagenumbers if on page 2 or further*/}
+          {currentPage > 1 ? showFromSecondpage : ""}
 
           <li className="page-item active">
             <span className="page-link active">{currentPage}</span>

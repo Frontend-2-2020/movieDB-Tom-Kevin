@@ -6,7 +6,6 @@ class MovieCard extends Component {
   render() {
     const { movieId, title, poster, release, score } = this.props;
 
-    console.log(movieId, title, poster, release, score);
     return (
       <div className={`${styling.grid__item} rounded`}>
         <img
